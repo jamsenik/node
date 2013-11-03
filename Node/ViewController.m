@@ -14,6 +14,7 @@
 @interface ViewController (){
     SoundStuff *ss;
     Notes *notes;
+    int right;
 }
 
 @end
@@ -36,7 +37,7 @@
     notes = [[Notes alloc] init];
     [notes nextRandomKey];
     [_NoteImage setImage:[notes currentImage]];
-    
+    right = 0;
     
     // Override point for customization after application launch.
     
@@ -50,12 +51,20 @@
 
 -(void) foundTone: (float) freq{
     if ([notes isCurrentKey:freq]){
+        right++;
+        
         [notes nextRandomKey];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [_NoteImage setImage:[notes currentImage]];
+            [_Power setText:[NSString stringWithFormat:@"%i", right]];
         }];
         
-    };
+    } else {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [_NoteImage setImage:[notes currentImage]];
+            [_Power setText:[NSString stringWithFormat:@"%i (%i)", right, (int) freq]];
+        }];
+    }
 }
 
 
