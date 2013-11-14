@@ -11,5 +11,10 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *Power;
 @property (strong, nonatomic) IBOutlet UIImageView *NoteImage;
+@property (strong, nonatomic) IBOutlet UISwitch *trebleSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *bassSwitch;
 -(void) foundTone: (float) key;
+-(IBAction)resetScore:(id)sender;
+-(IBAction)trebleSwitched:(id)sender;
+-(IBAction)bassSwitched:(id)sender;
 @end

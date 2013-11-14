@@ -7,11 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AudioUnit/AudioUnit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <Accelerate/Accelerate.h>
+#include <stdlib.h>
 #import "ViewController.h"
 
-@interface SoundStuff : NSObject
+
+@interface SoundStuff : NSObject {
+    
+	
+	AudioStreamBasicDescription streamFormat;
+	
+	FFTSetup fftSetup;
+	COMPLEX_SPLIT A;
+	int log2n, n, nOver2;
+	
+	void *dataBuffer;
+	float *outputBuffer;
+	size_t bufferCapacity;	// In samples
+	size_t index;	// In samples
+    
+	float sampleRate;
+	float frequency;
+}
 -(int) initAudioSession;
 -(int) initAudioStreams;
 -(int) startAudioUnit;
 -(void) setViewController:(ViewController *) theController;
+-(void)initializeAudioSession;
+-(void)createAUProcessingGraph;
+-(void)initializeAndStartProcessingGraph;
 @end

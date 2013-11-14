@@ -15,7 +15,10 @@ float const A4 = 440.0f;
 
 @implementation Notes {
     int currentKey;
+    int currentClefisTreble;
     NSDictionary *noteNames;
+    BOOL treble;
+    BOOL bass;
     
 }
 
@@ -64,7 +67,9 @@ float const A4 = 440.0f;
 }
 
 -(UIImage *) findImage:(int) key{
-    NSString *name = [NSString stringWithFormat:@"%i.jpg", key];
+    NSString *name = (currentClefisTreble ?
+                      [NSString stringWithFormat:@"T%i.jpg", key]
+                      : [NSString stringWithFormat:@"B%i.jpg", key]);
     UIImage *img = [UIImage imageNamed:name];
     return img;
 }
@@ -78,10 +83,33 @@ float const A4 = 440.0f;
 }
 
 -(void) nextRandomKey {
-    int lowerBound = 38;
-    int upperBound = 65;
+    int trebleLowerBound = 38;
+    int trebleUpperBound = 65;
+    int bassLowerBound = 38;
+    int bassUpperBound = 65;
+    
+    if (treble & bass){
+        currentClefisTreble = (arc4random() % 2) == 0;
+    } else if (treble) {
+        currentClefisTreble = true;
+    } else if (bass) {
+        currentClefisTreble = false;
+    } else {
+        return;
+    }
+    
+    int lowerBound = (currentClefisTreble ? trebleLowerBound : bassLowerBound);
+    int upperBound = (currentClefisTreble ? trebleUpperBound : bassUpperBound);
     int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    
     currentKey = rndValue;
 }
+-(void) enableTreble:(BOOL) enabled{
+    treble = enabled;
+};
+
+-(void) enableBass:(BOOL) enabled{
+    bass = enabled;
+};
 
 @end

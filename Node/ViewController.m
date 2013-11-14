@@ -30,9 +30,13 @@
     
     ss = [SoundStuff alloc];
     
-    int res = [ss initAudioSession];
-    res = [ss initAudioStreams];
-    res = [ss startAudioUnit];
+    //int res = [ss initAudioSession];
+    //res = [ss initAudioStreams];
+    //res = [ss startAudioUnit];
+    
+    [ss createAUProcessingGraph];
+	[ss initializeAndStartProcessingGraph];
+    
     [ss setViewController:self];
     notes = [[Notes alloc] init];
     [notes nextRandomKey];
@@ -58,14 +62,19 @@
             [_NoteImage setImage:[notes currentImage]];
             [_Power setText:[NSString stringWithFormat:@"%i", right]];
         }];
-        
-    } else {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [_NoteImage setImage:[notes currentImage]];
-            [_Power setText:[NSString stringWithFormat:@"%i (%i)", right, (int) freq]];
-        }];
     }
 }
 
+-(IBAction)resetScore:(id)sender{
+    right = 0;
+    [_Power setText:[NSString stringWithFormat:@"%i", right]];
+}
+
+-(IBAction)trebleSwitched:(id)sender{
+    right = right;
+}
+-(IBAction)bassSwitched:(id)sender{
+    right = right;
+}
 
 @end    

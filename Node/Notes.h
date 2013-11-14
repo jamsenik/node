@@ -15,4 +15,7 @@
 -(void) nextRandomKey;
 -(BOOL) isCurrentKey:(float) freq;
 -(UIImage *) currentImage;
+-(void) enableTreble:(BOOL) enabled;
+-(void) enableBass:(BOOL) enabled;
+
 @end
