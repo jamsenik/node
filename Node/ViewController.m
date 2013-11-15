@@ -67,14 +67,18 @@
 
 -(IBAction)resetScore:(id)sender{
     right = 0;
+    [notes nextRandomKey];
+    [_NoteImage setImage:[notes currentImage]];
     [_Power setText:[NSString stringWithFormat:@"%i", right]];
 }
 
--(IBAction)trebleSwitched:(id)sender{
-    right = right;
+-(IBAction)trebleSwitched:(UISwitch *)sender{
+    BOOL turnOn = sender.isOn;
+    [notes enableTreble:turnOn];
 }
--(IBAction)bassSwitched:(id)sender{
-    right = right;
+-(IBAction)bassSwitched:(UISwitch *)sender{
+    BOOL turnOn = sender.isOn;
+    [notes enableBass:turnOn];
 }
 
 @end    

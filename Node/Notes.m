@@ -40,6 +40,8 @@ float const A4 = 440.0f;
                       @(10) : @"G",
                       @(11) : @"G#",
                       };
+        treble = true;
+        bass = FALSE;
         
     }
     
@@ -68,8 +70,8 @@ float const A4 = 440.0f;
 
 -(UIImage *) findImage:(int) key{
     NSString *name = (currentClefisTreble ?
-                      [NSString stringWithFormat:@"T%i.jpg", key]
-                      : [NSString stringWithFormat:@"B%i.jpg", key]);
+                      [NSString stringWithFormat:@"T%i.tif", key]
+                      : [NSString stringWithFormat:@"B%i.tif", key]);
     UIImage *img = [UIImage imageNamed:name];
     return img;
 }
@@ -85,8 +87,8 @@ float const A4 = 440.0f;
 -(void) nextRandomKey {
     int trebleLowerBound = 38;
     int trebleUpperBound = 65;
-    int bassLowerBound = 38;
-    int bassUpperBound = 65;
+    int bassLowerBound = 16;
+    int bassUpperBound = 43;
     
     if (treble & bass){
         currentClefisTreble = (arc4random() % 2) == 0;

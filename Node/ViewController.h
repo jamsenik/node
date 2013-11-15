@@ -15,6 +15,6 @@
 @property (strong, nonatomic) IBOutlet UISwitch *bassSwitch;
 -(void) foundTone: (float) key;
 -(IBAction)resetScore:(id)sender;
--(IBAction)trebleSwitched:(id)sender;
--(IBAction)bassSwitched:(id)sender;
+-(IBAction)trebleSwitched:(UISwitch *)sender;
+-(IBAction)bassSwitched:(UISwitch *)sender;
 @end
