@@ -53,6 +53,7 @@ float const A4 = 440.0f;
     int key0 = roundf(12*log2(freq/440.0)+49);
     float freq0 = powf(SEMITONE, key0 - 49) * A4;
     float diff = fabsf(freq - freq0) / freq0;
+    NSLog(@"freq: %f, freq0: %f key: %i current key: %i",freq, freq0, key0, currentKey);
     if (diff < DEVIATION){
         
         return key0;
@@ -87,7 +88,7 @@ float const A4 = 440.0f;
 -(void) nextRandomKey {
     int trebleLowerBound = 38;
     int trebleUpperBound = 65;
-    int bassLowerBound = 16;
+    int bassLowerBound = 21;
     int bassUpperBound = 43;
     
     if (treble & bass){

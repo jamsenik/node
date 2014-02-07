@@ -16,7 +16,7 @@
 
 
 @interface SoundStuff : NSObject {
-    
+     
 	
 	AudioStreamBasicDescription streamFormat;
 	
@@ -32,9 +32,6 @@
 	float sampleRate;
 	float frequency;
 }
--(int) initAudioSession;
--(int) initAudioStreams;
--(int) startAudioUnit;
 -(void) setViewController:(ViewController *) theController;
 -(void)initializeAudioSession;
 -(void)createAUProcessingGraph;

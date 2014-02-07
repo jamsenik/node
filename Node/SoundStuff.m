@@ -35,7 +35,7 @@ AudioUnit *audioUnit;
 float *floatBuffer;
 int bufferCount;
 int powerCount = 0;
-int bufferLength = 2048;
+int bufferLength = 1024;
 int sampleRate  = 44100;
 SoundStuff *theStuff;
 float *difference;
@@ -119,18 +119,30 @@ float differenceFunction(){
     
     float minBin = 0;
     float minDiff = bufferLength;
-    for(int tau = 22; tau < 500; tau++){
+    BOOL firstPeak = false;
+    difference[21] = 0;
+    for(int tau = 22; tau < 600; tau++){
         difference[tau] = 0;
         for(int j = 0; j + tau < bufferLength; j++){
             float temp = (floatBuffer[j] - floatBuffer [j+tau]);
             difference[tau] += temp * temp;
         }
+        if (!firstPeak){
+            if (difference[tau] < difference[tau-1]){
+                firstPeak = true;
+            }
+        }
         if (difference[tau] < minDiff){
             minBin = tau;
             minDiff = difference[tau];
         }
-        //printf("%i\t%i\n", (int)(1000*floatBuffer[tau]),(int)(1000*diffenrence[tau]));
+        
     }
+    for(int i = 0; i< bufferLength;i++){
+        
+    printf("%i\t%i\n", (int)(1000*floatBuffer[i]),(int)(1000*difference[i]));
+    };
+    printf("Bin: %f\n", minBin);
     
     float freq = sampleRate / minBin;
     
