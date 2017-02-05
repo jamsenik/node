@@ -10,8 +10,6 @@
 #import <AudioUnit/AudioUnit.h>
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
-//#import <vDSP.h>
-//#import <vDSP_translate.h>
 #import <Accelerate/Accelerate.h>
 #import "ViewController.h"
 
@@ -175,18 +173,6 @@ OSStatus RenderFFTCallback (void					*inRefCon,
                             AudioBufferList				*ioData)
 {
 	
-//	COMPLEX_SPLIT A = THIS->A;
-//	void *dataBuffer = THIS->dataBuffer;
-//	float *outputBuffer = THIS->outputBuffer;
-//	FFTSetup fftSetup = THIS->fftSetup;
-//	
-//	uint32_t log2n = THIS->log2n;
-//	uint32_t n = THIS->n;
-//	uint32_t nOver2 = THIS->nOver2;
-//	uint32_t stride = 1;
-//	int bufferCapacity = THIS->bufferCapacity;
-//	SInt16 index = THIS->index;
-//	
 	AudioUnit rioUnit =  ioUnit;
 	OSStatus renderErr;
 	UInt32 bus1 = 1;
@@ -325,7 +311,7 @@ OSStatus RenderFFTCallback (void					*inRefCon,
 	bufferList->mNumberBuffers = 1;
 	bufferList->mBuffers[0].mNumberChannels = 1;
 	
-	bufferList->mBuffers[0].mDataByteSize = kBufferSize*bytesPerSample;
+	bufferList->mBuffers[0].mDataByteSize = (int) (kBufferSize*bytesPerSample);
 	bufferList->mBuffers[0].mData = calloc(kBufferSize, bytesPerSample);
 }
 
@@ -335,14 +321,14 @@ OSStatus RenderFFTCallback (void					*inRefCon,
 - (size_t)ASBDForSoundMode {
 	AudioStreamBasicDescription asbd = {0};
 	size_t bytesPerSample;
-	bytesPerSample = sizeof(SInt16);
+	bytesPerSample = 2; //sizeof(SInt16);
 	asbd.mFormatID = kAudioFormatLinearPCM;
 	asbd.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
-	asbd.mBitsPerChannel = 8 * bytesPerSample;
+	asbd.mBitsPerChannel = 16;
 	asbd.mFramesPerPacket = 1;
 	asbd.mChannelsPerFrame = 1;
-	asbd.mBytesPerPacket = bytesPerSample * asbd.mFramesPerPacket;
-	asbd.mBytesPerFrame = bytesPerSample * asbd.mChannelsPerFrame;
+	asbd.mBytesPerPacket = (int) bytesPerSample * asbd.mFramesPerPacket;
+	asbd.mBytesPerFrame = (int) bytesPerSample * asbd.mChannelsPerFrame;
 	asbd.mSampleRate = sampleRate;
 	
 	streamFormat = asbd;

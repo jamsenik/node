@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		3A0E8B1C181995290029EC70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E8B1B181995290029EC70 /* Default-568h@2x.png */; };
 		3A0E8B23181ADDFE0029EC70 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E8B22181ADDFE0029EC70 /* Notes.m */; };
+		3A1749A218B7D8140050FB72 /* Piano.pp.E3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499418B7D8140050FB72 /* Piano.pp.E3.aiff */; };
+		3A1749A318B7D8140050FB72 /* Piano.mf.E4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499518B7D8140050FB72 /* Piano.mf.E4.aiff */; };
+		3A1749A418B7D8140050FB72 /* Piano.mf.E2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499618B7D8140050FB72 /* Piano.mf.E2.aiff */; };
+		3A1749A518B7D8140050FB72 /* Piano.mf.Db6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499718B7D8140050FB72 /* Piano.mf.Db6.aiff */; };
+		3A1749A618B7D8140050FB72 /* Piano.mf.D5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499818B7D8140050FB72 /* Piano.mf.D5.aiff */; };
+		3A1749A718B7D8140050FB72 /* Piano.mf.Bb4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499918B7D8140050FB72 /* Piano.mf.Bb4.aiff */; };
+		3A1749A818B7D8140050FB72 /* Piano.mf.Bb3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499A18B7D8140050FB72 /* Piano.mf.Bb3.aiff */; };
+		3A1749A918B7D8140050FB72 /* Piano.mf.Ab5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499B18B7D8140050FB72 /* Piano.mf.Ab5.aiff */; };
+		3A1749AA18B7D8140050FB72 /* Piano.mf.Ab3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499C18B7D8140050FB72 /* Piano.mf.Ab3.aiff */; };
+		3A1749AB18B7D8140050FB72 /* Piano.mf.A5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499D18B7D8140050FB72 /* Piano.mf.A5.aiff */; };
+		3A1749AC18B7D8140050FB72 /* Piano.mf.A1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499E18B7D8140050FB72 /* Piano.mf.A1.aiff */; };
+		3A1749AD18B7D8140050FB72 /* Piano.ff.G3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A17499F18B7D8140050FB72 /* Piano.ff.G3.aiff */; };
+		3A1749AE18B7D8140050FB72 /* Piano.ff.A2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A1749A018B7D8140050FB72 /* Piano.ff.A2.aiff */; };
+		3A1749AF18B7D8140050FB72 /* Piano.mf.Eb4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3A1749A118B7D8140050FB72 /* Piano.mf.Eb4.aiff */; };
 		3A39C4BD174E8F0A0081319C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C4BC174E8F090081319C /* UIKit.framework */; };
 		3A39C4BF174E8F0A0081319C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C4BE174E8F0A0081319C /* Foundation.framework */; };
 		3A39C4C1174E8F0A0081319C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C4C0174E8F0A0081319C /* CoreGraphics.framework */; };
@@ -27,6 +41,7 @@
 		3A39C502174FB4280081319C /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C4FF174FB4280081319C /* CoreAudio.framework */; };
 		3A39C50A175668640081319C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C509175668640081319C /* Accelerate.framework */; };
 		3A9F16A4182828F500C89110 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F16A3182828F500C89110 /* AVFoundation.framework */; };
+		3AF3ED0518B89E7E008EE487 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A39C4FD174FB4280081319C /* AudioToolbox.framework */; };
 		3AFA0FFD18367E9C00FE19A5 /* B16.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA0FE118367E9C00FE19A5 /* B16.tif */; };
 		3AFA0FFE18367E9C00FE19A5 /* B17.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA0FE218367E9C00FE19A5 /* B17.tif */; };
 		3AFA0FFF18367E9C00FE19A5 /* B18.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA0FE318367E9C00FE19A5 /* B18.tif */; };
@@ -105,6 +120,20 @@
 		3A0E8B1B181995290029EC70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3A0E8B21181ADDFE0029EC70 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
 		3A0E8B22181ADDFE0029EC70 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		3A17499418B7D8140050FB72 /* Piano.pp.E3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.pp.E3.aiff; sourceTree = "<group>"; };
+		3A17499518B7D8140050FB72 /* Piano.mf.E4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.E4.aiff; sourceTree = "<group>"; };
+		3A17499618B7D8140050FB72 /* Piano.mf.E2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.E2.aiff; sourceTree = "<group>"; };
+		3A17499718B7D8140050FB72 /* Piano.mf.Db6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Db6.aiff; sourceTree = "<group>"; };
+		3A17499818B7D8140050FB72 /* Piano.mf.D5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.D5.aiff; sourceTree = "<group>"; };
+		3A17499918B7D8140050FB72 /* Piano.mf.Bb4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Bb4.aiff; sourceTree = "<group>"; };
+		3A17499A18B7D8140050FB72 /* Piano.mf.Bb3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Bb3.aiff; sourceTree = "<group>"; };
+		3A17499B18B7D8140050FB72 /* Piano.mf.Ab5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Ab5.aiff; sourceTree = "<group>"; };
+		3A17499C18B7D8140050FB72 /* Piano.mf.Ab3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Ab3.aiff; sourceTree = "<group>"; };
+		3A17499D18B7D8140050FB72 /* Piano.mf.A5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.A5.aiff; sourceTree = "<group>"; };
+		3A17499E18B7D8140050FB72 /* Piano.mf.A1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.A1.aiff; sourceTree = "<group>"; };
+		3A17499F18B7D8140050FB72 /* Piano.ff.G3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.ff.G3.aiff; sourceTree = "<group>"; };
+		3A1749A018B7D8140050FB72 /* Piano.ff.A2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.ff.A2.aiff; sourceTree = "<group>"; };
+		3A1749A118B7D8140050FB72 /* Piano.mf.Eb4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Piano.mf.Eb4.aiff; sourceTree = "<group>"; };
 		3A39C4B9174E8F090081319C /* Node.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Node.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A39C4BC174E8F090081319C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A39C4BE174E8F0A0081319C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,9 +231,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A39C500174FB4280081319C /* AudioToolbox.framework in Frameworks */,
 				3A9F16A4182828F500C89110 /* AVFoundation.framework in Frameworks */,
 				3A39C50A175668640081319C /* Accelerate.framework in Frameworks */,
-				3A39C500174FB4280081319C /* AudioToolbox.framework in Frameworks */,
 				3A39C502174FB4280081319C /* CoreAudio.framework in Frameworks */,
 				3A39C4BD174E8F0A0081319C /* UIKit.framework in Frameworks */,
 				3A39C4BF174E8F0A0081319C /* Foundation.framework in Frameworks */,
@@ -216,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF3ED0518B89E7E008EE487 /* AudioToolbox.framework in Frameworks */,
 				3A39C4E4174E8F0B0081319C /* SenTestingKit.framework in Frameworks */,
 				3A39C4E5174E8F0B0081319C /* UIKit.framework in Frameworks */,
 				3A39C4E6174E8F0B0081319C /* Foundation.framework in Frameworks */,
@@ -369,6 +399,20 @@
 		3A39C4EA174E8F0B0081319C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A17499418B7D8140050FB72 /* Piano.pp.E3.aiff */,
+				3A17499518B7D8140050FB72 /* Piano.mf.E4.aiff */,
+				3A17499618B7D8140050FB72 /* Piano.mf.E2.aiff */,
+				3A17499718B7D8140050FB72 /* Piano.mf.Db6.aiff */,
+				3A17499818B7D8140050FB72 /* Piano.mf.D5.aiff */,
+				3A17499918B7D8140050FB72 /* Piano.mf.Bb4.aiff */,
+				3A17499A18B7D8140050FB72 /* Piano.mf.Bb3.aiff */,
+				3A17499B18B7D8140050FB72 /* Piano.mf.Ab5.aiff */,
+				3A17499C18B7D8140050FB72 /* Piano.mf.Ab3.aiff */,
+				3A17499D18B7D8140050FB72 /* Piano.mf.A5.aiff */,
+				3A17499E18B7D8140050FB72 /* Piano.mf.A1.aiff */,
+				3A17499F18B7D8140050FB72 /* Piano.ff.G3.aiff */,
+				3A1749A018B7D8140050FB72 /* Piano.ff.A2.aiff */,
+				3A1749A118B7D8140050FB72 /* Piano.mf.Eb4.aiff */,
 				3A39C4EB174E8F0B0081319C /* NodeTests-Info.plist */,
 				3A39C4EC174E8F0B0081319C /* InfoPlist.strings */,
 			);
@@ -536,7 +580,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1749A418B7D8140050FB72 /* Piano.mf.E2.aiff in Resources */,
+				3A1749AC18B7D8140050FB72 /* Piano.mf.A1.aiff in Resources */,
+				3A1749AA18B7D8140050FB72 /* Piano.mf.Ab3.aiff in Resources */,
+				3A1749A918B7D8140050FB72 /* Piano.mf.Ab5.aiff in Resources */,
+				3A1749A518B7D8140050FB72 /* Piano.mf.Db6.aiff in Resources */,
+				3A1749AF18B7D8140050FB72 /* Piano.mf.Eb4.aiff in Resources */,
+				3A1749A718B7D8140050FB72 /* Piano.mf.Bb4.aiff in Resources */,
+				3A1749A618B7D8140050FB72 /* Piano.mf.D5.aiff in Resources */,
+				3A1749A218B7D8140050FB72 /* Piano.pp.E3.aiff in Resources */,
+				3A1749AB18B7D8140050FB72 /* Piano.mf.A5.aiff in Resources */,
 				3A39C4EE174E8F0B0081319C /* InfoPlist.strings in Resources */,
+				3A1749A318B7D8140050FB72 /* Piano.mf.E4.aiff in Resources */,
+				3A1749A818B7D8140050FB72 /* Piano.mf.Bb3.aiff in Resources */,
+				3A1749AD18B7D8140050FB72 /* Piano.ff.G3.aiff in Resources */,
+				3A1749AE18B7D8140050FB72 /* Piano.ff.A2.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
