@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var frequencyLabel: UILabel!
     @IBOutlet var amplitudeLabel: UILabel!
+    @IBOutlet var toneLabel: UILabel!
     //@IBOutlet var noteNameWithSharpsLabel: UILabel!
     //@IBOutlet var noteNameWithFlatsLabel: UILabel!
     //@IBOutlet var audioInputPlot: EZAudioPlot!
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
         if tracker.amplitude > 0.1 {
             frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             amplitudeLabel.text = String(format: "%0.2f", tracker.amplitude)
+            let f = Double(tracker.frequency)
+            let semitone = pow(2.0, 1.0 / 12.0)
+            let semitones = (log(f) - log(440)) / log(semitone)
+            toneLabel.text = String(format: "%0.1f", semitones);
         }
     }
     
