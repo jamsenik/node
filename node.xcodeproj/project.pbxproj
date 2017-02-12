@@ -16,6 +16,7 @@
 		3AB007851D54A15D0084DF7C /* nodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB007841D54A15D0084DF7C /* nodeUITests.swift */; };
 		3AB67BEC1E4780740058C110 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB67BEB1E4780740058C110 /* AudioKit.framework */; };
 		3AB67BED1E4780740058C110 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB67BEB1E4780740058C110 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3ADE95631E505FDB00C0FB37 /* ToneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE95621E505FDB00C0FB37 /* ToneModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		3AB007841D54A15D0084DF7C /* nodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nodeUITests.swift; sourceTree = "<group>"; };
 		3AB007861D54A15D0084DF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AB67BEB1E4780740058C110 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		3ADE95621E505FDB00C0FB37 /* ToneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneModel.swift; path = Node/ToneModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				3AB0076B1D54A15D0084DF7C /* Assets.xcassets */,
 				3AB0076D1D54A15D0084DF7C /* LaunchScreen.storyboard */,
 				3AB007701D54A15D0084DF7C /* Info.plist */,
+				3ADE95621E505FDB00C0FB37 /* ToneModel.swift */,
 			);
 			path = node;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				3AB007671D54A15D0084DF7C /* ViewController.swift in Sources */,
 				3AB007651D54A15D0084DF7C /* AppDelegate.swift in Sources */,
+				3ADE95631E505FDB00C0FB37 /* ToneModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

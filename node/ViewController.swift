@@ -11,17 +11,22 @@ import AudioKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet var frequencyLabel: UILabel!
     @IBOutlet var amplitudeLabel: UILabel!
     @IBOutlet var toneLabel: UILabel!
-    //@IBOutlet var noteNameWithSharpsLabel: UILabel!
-    //@IBOutlet var noteNameWithFlatsLabel: UILabel!
-    //@IBOutlet var audioInputPlot: EZAudioPlot!
+    
+    @IBOutlet var ScoreLabel: UILabel!
+    @IBOutlet var noteImage: UIImageView!
+    
+    @IBOutlet var TrebleSwitch: UISwitch!
+    @IBOutlet var BassSwitch: UISwitch!
+    
     
     var mic : AKMicrophone!
     var tracker : AKFrequencyTracker!
     var silence: AKBooster!
+    
+    var model: ToneModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +38,9 @@ class ViewController: UIViewController {
         AudioKit.output = silence
         AudioKit.start()
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateUI), userInfo: nil, repeats: true)
+        
+        model = ToneModel(pitchReference: 440.0)
+        noteImage.image = model.ScoreImage()
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,10 +52,8 @@ class ViewController: UIViewController {
         if tracker.amplitude > 0.1 {
             frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             amplitudeLabel.text = String(format: "%0.2f", tracker.amplitude)
-            let f = Double(tracker.frequency)
-            let semitone = pow(2.0, 1.0 / 12.0)
-            let semitones = (log(f) - log(440)) / log(semitone)
-            toneLabel.text = String(format: "%0.1f", semitones);
+            toneLabel.text = String(format: "%0.1f");
+
         }
     }
     
