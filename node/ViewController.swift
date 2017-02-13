@@ -53,7 +53,13 @@ class ViewController: UIViewController {
             frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             amplitudeLabel.text = String(format: "%0.2f", tracker.amplitude)
             toneLabel.text = String(format: "%0.1f");
-
+            let right = model.play(freq: tracker.frequency)
+            if (right){
+                ScoreLabel.text = String(model.Score);
+                model.next()
+                noteImage.image = model.ScoreImage()
+            }
+            
         }
     }
     
