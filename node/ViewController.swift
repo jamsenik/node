@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var frequencyLabel: UILabel!
     @IBOutlet var amplitudeLabel: UILabel!
-    @IBOutlet var toneLabel: UILabel!
     
     @IBOutlet var ScoreLabel: UILabel!
     @IBOutlet var noteImage: UIImageView!
@@ -27,6 +26,14 @@ class ViewController: UIViewController {
     var silence: AKBooster!
     
     var model: ToneModel!
+    
+    @IBAction func TrebleChanged(_ sender: Any) {
+        model.Treble = TrebleSwitch.isOn
+    }
+    
+    @IBAction func BassChanged(_ sender: Any) {
+        model.Bass = BassSwitch.isOn
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +59,6 @@ class ViewController: UIViewController {
         if tracker.amplitude > 0.1 {
             frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             amplitudeLabel.text = String(format: "%0.2f", tracker.amplitude)
-            toneLabel.text = String(format: "%0.1f");
             let right = model.play(freq: tracker.frequency)
             if (right){
                 ScoreLabel.text = String(model.Score);
